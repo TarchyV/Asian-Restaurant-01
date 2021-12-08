@@ -22,11 +22,11 @@ function Navbar(){
 function MapsComponent(props) {
   const center = {
     lat: 43.6532,
-    lng: 79.3832,
+    lng: -79.3832,
   };
   const mapStyle = {
-    width: props.width+'px',
-    height: props.height+'px',
+    width: props.width+'vw',
+    height: props.height+'vw',
     border: '2px solid #c73434',
     boxShadow: 'rgba(50, 50, 93, 0.11) -15px 5px 60px 2px',
   };
@@ -51,7 +51,7 @@ function MapsComponent(props) {
       <GoogleMap
         mapContainerStyle={mapStyle}
         center={center}
-        zoom={20}
+        zoom={200}
         onLoad={onLoad}
         onUnmount={onUnmount}
 
@@ -75,7 +75,6 @@ class SplashNav extends React.Component {
       scrollPosition: 0,
       SplashStlye: {
         background: "linear-gradient(to right, #f0f0f0, #ffffff)",
-        height: "50em",
         position: "fixed",
         width: "80%",
         boxShadow: "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px",
@@ -158,7 +157,6 @@ class SplashNav extends React.Component {
       this.setState({
         SplashStlye: {
           background: "linear-gradient(to right, #f0f0f0, #ffffff)",
-          height: "50em",
           width: "80%",
           position: "fixed",
           boxShadow: "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px",
@@ -218,7 +216,7 @@ class SplashNav extends React.Component {
           {this.state.description}
           </p>
           <div className="MapHolder" key={4}>
-            <MapsComponent width={400} height={220} key={5} />
+            <MapsComponent width={25} height={15} key={5} />
           </div>
         </div>       
       );
